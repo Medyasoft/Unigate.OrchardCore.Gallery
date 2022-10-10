@@ -1,7 +1,8 @@
 ﻿using Microsoft.Extensions.Options;
 using OrchardCore.ResourceManagement;
 
-namespace Etch.OrchardCore.Gallery {
+namespace Etch.OrchardCore.Gallery
+{
 
     public class ResourceManagementOptionsConfiguration : IConfigureOptions<ResourceManagementOptions>
     {
@@ -14,6 +15,10 @@ namespace Etch.OrchardCore.Gallery {
             _manifest
                 .DefineStyle("Gallery.Styles")
                 .SetUrl("/Etch.OrchardCore.Gallery/Styles/styles.css");
+
+            _manifest
+                .DefineStyle("Gallery.Custom")
+                .SetUrl("/Etch.OrchardCore.Gallery/Styles/gallery.css");
 
             _manifest
                 .DefineScript("Gallery.Scripts")
